@@ -121,8 +121,13 @@
               "devServerTarget": "hacker-news:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "hacker-news"
 }
