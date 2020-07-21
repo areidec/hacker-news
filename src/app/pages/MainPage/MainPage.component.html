@@ -1,0 +1,6 @@
+<app-news-list [hits]="hits" [lastItem]="lastItem"></app-news-list>
+<button
+  (click)="showMore()"
+  [disabled]="loading"
+  *ngIf="currPage !== lastPage - 1"
+  >show more</button>

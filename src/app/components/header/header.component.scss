@@ -1,0 +1,16 @@
+.header {
+  background-color: #ff6600;
+
+  &-logo {
+    color: #000;
+
+    h1 {
+      margin: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}

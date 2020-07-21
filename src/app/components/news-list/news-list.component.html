@@ -1,0 +1,14 @@
+<ul class="news-list">
+  <li
+    *ngFor="let hit of hits; let i = index"
+    class="news-list-item">
+    <span>{{i + 1 + lastItem}}.</span>
+    <h3>{{ hit.title }}
+      <a *ngIf="hit.url" [href]="hit.url" target="_blank">({{hit.url | shortDomain}})</a>
+    </h3>
+    <p>
+      {{hit.points}} points | by {{hit.author}} | {{hit.created_at | dateAgo}} |
+      <a *ngIf="hit.num_comments" [routerLink]="['/news', hit.objectID]">{{hit.num_comments}} comments</a>
+    </p>
+  </li>
+</ul>

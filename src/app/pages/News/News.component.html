@@ -1,0 +1,12 @@
+<ng-container *ngTemplateOutlet="recurciveList; context:{ comments: comments }"></ng-container>
+
+<ng-template #recurciveList let-comments="comments">
+  <div class="comment" *ngFor="let comment of comments;">
+    <p class="comment-author">by {{ comment.author }} | {{ comment.created_at | dateAgo }}</p>
+    <p class="comment-text" [innerHTML]="comment.comment_text"></p>
+
+    <div *ngIf="comment.childs.length > 0" class="comment comment-child">
+      <ng-container *ngTemplateOutlet="recurciveList; context:{ comments: comment.childs }"></ng-container>
+    </div>
+  </div>
+</ng-template>

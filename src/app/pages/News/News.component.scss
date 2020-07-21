@@ -1,0 +1,16 @@
+.comment {
+  padding: 10px;
+
+  &-child {
+    padding-left: 20px;
+  }
+
+  &-author {
+    color: #828282;
+    border-bottom: 1px solid #000;
+  }
+
+  &-text {
+    padding-left: 10px;
+  }
+}

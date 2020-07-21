@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+$breakpoints: (
+	xs: 0,
+	sm: 720px,
+	md: 1280px,
+	lg: 1920px
+) !default;
+
+// Настройки контейнера
+// prettier-ignore
+$max-widths: (
+	xs: 100%,
+	sm: 698px,
+	md: 1140px,
+	lg: 1600px
+) !default;
+
+$grid-gutter-width: 30px !default; // Отступ между колонками ( сумма падингов одной колонки )
+$grid-columns: 12 !default; // Количество колонок
+
+
+$grid-breakpoints: (
+	'xs': map-get($breakpoints, 'xs'),
+	'sm': map-get($breakpoints, 'sm'),
+	'md': map-get($breakpoints, 'md'),
+	'lg': map-get($breakpoints, 'lg')
+);
+// Переопределение Bootstrap контейнера
+$container-max-widths: (
+	'sm': map-get($max-widths, 'sm'),
+	'md': map-get($max-widths, 'md'),
+	'lg': map-get($max-widths, 'lg')
+);
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+// Опционально
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/grid';
+
+body {
+  margin: 8px;
+}
+
+.wrapper {
+  background-color: #f6f6ef;
+}
