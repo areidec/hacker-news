@@ -22,7 +22,7 @@ export interface Hit {
   providedIn: 'root'
 })
 export class Hn {
-  _url = 'http://hn.algolia.com/api/v1'
+  _url = 'https://hn.algolia.com/api/v1'
   constructor(private http: HttpClient) { }
 
   getNews(page = 0) {
